@@ -2,8 +2,8 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Ben Hendel-Doying",
   "classifications": [ "Game", "MonoGame", "PlayPlayMini" ],
-  "groupIdentity": "BenMakesGames.PlayPlayMini.Templates",
-  "identity": "BenMakesGames.PlayPlayMini.Templates.NLog",
+  "groupIdentity": "BenMakesGames.PlayPlayMini.NLog",
+  "identity": "BenMakesGames.PlayPlayMini.NLog",
   "name": "PlayPlayMini with NLog",
   "shortName": "playplaymini.nlog",
   "tags": {
