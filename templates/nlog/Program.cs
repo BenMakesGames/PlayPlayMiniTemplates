@@ -18,8 +18,8 @@ gsmBuilder
     .SetWindowSize(1920 / 4, 1080 / 4, 2)
     .SetInitialGameState<Startup>()
     
-    // TODO: set a window title
-    //.SetWindowTitle("Word × Word")
+    // TODO: set a better window title
+    .SetWindowTitle("MyNamespace")
     
     // TODO: add any resources needed (refer to PlayPlayMini documentation for more info)
     .AddFonts(new FontMeta[] {
