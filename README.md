@@ -1,6 +1,6 @@
 # PlayPlayMini Templates
 
-This is a collection of templates for PlayPlayMini.
+This is a collection of templates for [PlayPlayMini](https://github.com/BenMakesGames/PlayPlayMini).
 
 The available templates are:
 1. `playplaymini.skeleton`
