@@ -1,4 +1,5 @@
 ﻿using BenMakesGames.PlayPlayMini;
+using BenMakesGames.PlayPlayMini.Model;
 using NLog;
 using NLog.Config;
 using NLog.Targets;

@@ -1,5 +1,6 @@
 using BenMakesGames.PlayPlayMini;
 using BenMakesGames.PlayPlayMini.Services;
+using Microsoft.Xna.Framework;
 
 namespace MyNamespace.GameStates;
 
@@ -9,9 +10,9 @@ public class Playing: IGameState
     private KeyboardManager Keyboard { get; }
     private GameStateManager GSM { get; }
 
-    public Startup(GraphicsManager graphics, GameStateManager gsm, KeyboardManager keyboard)
+    public Playing(GraphicsManager graphics, GameStateManager gsm, KeyboardManager keyboard)
     {
-        GraphicsManager = graphics;
+        Graphics = graphics;
         GSM = gsm;
         Keyboard = keyboard;
     }

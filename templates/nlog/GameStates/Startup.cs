@@ -1,5 +1,6 @@
 using BenMakesGames.PlayPlayMini;
 using BenMakesGames.PlayPlayMini.Services;
+using Microsoft.Xna.Framework;
 using NLog;
 
 namespace MyNamespace.GameStates;
@@ -12,7 +13,7 @@ public class Startup: IGameState
 
     public Startup(GraphicsManager graphics, GameStateManager gsm, ILogger logger)
     {
-        GraphicsManager = graphics;
+        Graphics = graphics;
         GSM = gsm;
         Logger = logger;
     }

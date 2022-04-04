@@ -1,4 +1,5 @@
 ﻿using BenMakesGames.PlayPlayMini;
+using BenMakesGames.PlayPlayMini.Model;
 using MyNamespace.GameStates;
 
 // TODO: any pre-req setup, ex:
