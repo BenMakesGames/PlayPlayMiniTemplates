@@ -1,11 +1,14 @@
-﻿using BenMakesGames.PlayPlayMini;
+﻿using Autofac;
+using BenMakesGames.PlayPlayMini;
 using BenMakesGames.PlayPlayMini.Model;
 using MyNamespace.GameStates;
 
 // TODO: any pre-req setup, ex:
 /*
  * var appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
- * Directory.CreateDirectory(@$"{appData}\MyGame");
+ * var appDataGameDirectory = @$"{appData}/MyNamespace";
+ * 
+ * Directory.CreateDirectory(appDataGameDirectory);
  */
 
 var gsmBuilder = new GameStateManagerBuilder();

@@ -1,15 +1,16 @@
-﻿using BenMakesGames.PlayPlayMini;
+﻿using Autofac;
+using Autofac.Extras.NLog;
+using BenMakesGames.PlayPlayMini;
 using BenMakesGames.PlayPlayMini.Model;
 using NLog;
 using NLog.Config;
 using NLog.Targets;
 using MyNamespace.GameStates;
 
-// TODO: any pre-req setup, ex:
-/*
- * var appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
- * Directory.CreateDirectory(@$"{appData}\MyGame");
- */
+var appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+var appDataGameDirectory = @$"{appData}/MyNamespace";
+
+Directory.CreateDirectory(appDataGameDirectory);
 
 var gsmBuilder = new GameStateManagerBuilder();
 
@@ -45,7 +46,7 @@ gsmBuilder
         var fileTarget = new FileTarget()
         {
             AutoFlush = true,
-            FileName = "MyGame.log",
+            FileName = $"{appDataGameDirectory}/Logs.txt",
             DeleteOldFileOnStartup = true,
         };
         config.AddRule(LogLevel.Debug, LogLevel.Fatal, fileTarget, "*");
