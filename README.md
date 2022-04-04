@@ -8,10 +8,10 @@ The available templates are:
    * Creates a template `Startup` and `Playing` game state to help you get started.
 2. `playplaymini.nlog`
    * Based on `playplaymini.skeleton`, and adds NLog to log exceptions, and other information.
-
+   
 ## Install Instructions
 
-`// TODO`
+`dotnet new --install BenMakesGames.PlayPlayMini.Templates`
 
 ## Usage Instructions
 
