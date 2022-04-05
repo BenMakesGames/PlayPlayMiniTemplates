@@ -16,11 +16,23 @@
         <ContentTargetFolders>content</ContentTargetFolders>
         <NoWarn>NU5128</NoWarn>
         <NoDefaultExcludes>true</NoDefaultExcludes>
+
+        <PackageProjectUrl>https://github.com/BenMakesGames/PlayPlayMiniTemplates</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/BenMakesGames/PlayPlayMiniTemplates</RepositoryUrl>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     </PropertyGroup>
 
     <ItemGroup>
         <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
         <Compile Remove="**\*" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="LICENSE.md">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
     </ItemGroup>
 
 </Project>
