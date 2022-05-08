@@ -8,13 +8,11 @@ public class Startup: IGameState
 {
     private GraphicsManager Graphics { get; }
     private GameStateManager GSM { get; }
-    private ILogger<Startup> Logger { get; }
 
-    public Startup(GraphicsManager graphics, GameStateManager gsm, ILogger<Startup> logger)
+    public Startup(GraphicsManager graphics, GameStateManager gsm)
     {
         Graphics = graphics;
         GSM = gsm;
-        Logger = logger;
     }
     
     public void ActiveInput(GameTime gameTime)
@@ -25,8 +23,6 @@ public class Startup: IGameState
     {
         if (Graphics.FullyLoaded)
         {
-            Logger.LogInformation("Assets loaded.");
-            
             // TODO: go to title menu, once that exists; for now, just jump straight into the game:
             GSM.ChangeState<Playing>();
         }
