@@ -1,7 +1,6 @@
 using BenMakesGames.PlayPlayMini;
 using BenMakesGames.PlayPlayMini.Services;
 using Microsoft.Xna.Framework;
-using NLog;
 
 namespace MyNamespace.GameStates;
 
@@ -9,9 +8,9 @@ public class Startup: IGameState
 {
     private GraphicsManager Graphics { get; }
     private GameStateManager GSM { get; }
-    private ILogger Logger { get; }
+    private ILogger<Startup> Logger { get; }
 
-    public Startup(GraphicsManager graphics, GameStateManager gsm, ILogger logger)
+    public Startup(GraphicsManager graphics, GameStateManager gsm, ILogger<Startup> logger)
     {
         Graphics = graphics;
         GSM = gsm;
@@ -26,7 +25,7 @@ public class Startup: IGameState
     {
         if (Graphics.FullyLoaded)
         {
-            Logger.Info("Assets loaded.");
+            Logger.LogInformation("Assets loaded.");
             
             // TODO: go to title menu, once that exists; for now, just jump straight into the game:
             GSM.ChangeState<Playing>();

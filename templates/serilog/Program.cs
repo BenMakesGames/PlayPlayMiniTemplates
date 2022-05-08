@@ -1,14 +1,12 @@
-﻿using Autofac;
-using Autofac.Extras.NLog;
-using BenMakesGames.PlayPlayMini;
+﻿using BenMakesGames.PlayPlayMini;
 using BenMakesGames.PlayPlayMini.Model;
-using NLog;
-using NLog.Config;
-using NLog.Targets;
 using MyNamespace.GameStates;
+using Serilog.Extensions.Autofac.DependencyInjection;
+using System;
+using System.IO;
 
 var appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-var appDataGameDirectory = @$"{appData}/MyNamespace";
+var appDataGameDirectory = $"{appData}/MyNamespace";
 
 Directory.CreateDirectory(appDataGameDirectory);
 
@@ -40,17 +38,9 @@ gsmBuilder
     
     // TODO: any additional service registration (refer to PlayPlayMini documentation for more info)
     .AddServices(s => {
-        s.RegisterModule<NLogModule>();
+        var logPath = $"{appDataGameDirectory}/Log.log";
 
-        var config = new LoggingConfiguration();
-        var fileTarget = new FileTarget()
-        {
-            AutoFlush = true,
-            FileName = $"{appDataGameDirectory}/Logs.txt",
-            DeleteOldFileOnStartup = true,
-        };
-        config.AddRule(LogLevel.Debug, LogLevel.Fatal, fileTarget, "*");
-        LogManager.Configuration = config;
+        s.RegisterSerilog(logPath);
     })
 ;
 

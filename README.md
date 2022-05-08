@@ -6,8 +6,8 @@ The available templates are:
 1. `playplaymini.skeleton`
    * A basic PlayPlayMini project, with no other dependencies.
    * Creates a template `Startup` and `Playing` game state to help you get started.
-2. `playplaymini.nlog`
-   * Based on `playplaymini.skeleton`, and adds NLog to log exceptions, and other information.
+2. `playplaymini.serilog`
+   * Based on `playplaymini.skeleton`, and adds Serilog to log exceptions, and other information.
    
 ## Install Instructions
 
