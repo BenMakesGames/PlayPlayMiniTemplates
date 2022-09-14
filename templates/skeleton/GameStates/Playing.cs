@@ -4,7 +4,8 @@ using Microsoft.Xna.Framework;
 
 namespace MyNamespace.GameStates;
 
-public class Playing: IGameState
+// sealed classes execute faster than non-sealed, so always seal your game states!
+public sealed class Playing: GameState
 {
     private GraphicsManager Graphics { get; }
     private KeyboardManager Keyboard { get; }
@@ -17,6 +18,10 @@ public class Playing: IGameState
         Keyboard = keyboard;
     }
     
+    // overriding lifecycle methods is optional; feel free to delete any overrides you're not using.
+    // note: you do NOT need to call the `base.` for lifecycle methods. so save some CPU cycles,
+    // and don't call them :P
+
     public void ActiveInput(GameTime gameTime)
     {
         // TODO: get input from keyboard (refer to PlayPlayMini documentation for more info)
@@ -38,5 +43,13 @@ public class Playing: IGameState
     public void AlwaysDraw(GameTime gameTime)
     {
         // TODO: draw game scene (refer to PlayPlayMini documentation for more info)
+    }
+
+    public override void Enter()
+    {
+    }
+
+    public override void Leave()
+    {
     }
 }
