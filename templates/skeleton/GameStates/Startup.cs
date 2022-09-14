@@ -19,7 +19,7 @@ public sealed class Startup: GameState
     // note: you do NOT need to call the `base.` for lifecycle methods. so save some CPU cycles,
     // and don't call them :P
 
-    public void ActiveUpdate(GameTime gameTime)
+    public override void ActiveUpdate(GameTime gameTime)
     {
         if (Graphics.FullyLoaded)
         {
@@ -28,7 +28,7 @@ public sealed class Startup: GameState
         }
     }
 
-    public void AlwaysDraw(GameTime gameTime)
+    public override void AlwaysDraw(GameTime gameTime)
     {
         // TODO: draw loading screen
     }

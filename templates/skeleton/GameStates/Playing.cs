@@ -22,25 +22,25 @@ public sealed class Playing: GameState
     // note: you do NOT need to call the `base.` for lifecycle methods. so save some CPU cycles,
     // and don't call them :P
 
-    public void ActiveInput(GameTime gameTime)
+    public override void ActiveInput(GameTime gameTime)
     {
         // TODO: get input from keyboard (refer to PlayPlayMini documentation for more info)
     }
 
-    public void ActiveUpdate(GameTime gameTime)
+    public override void ActiveUpdate(GameTime gameTime)
     {
         // TODO: update game objects based on user input, AI logic, etc
     }
 
-    public void AlwaysUpdate(GameTime gameTime)
+    public override void AlwaysUpdate(GameTime gameTime)
     {
     }
 
-    public void ActiveDraw(GameTime gameTime)
+    public override void ActiveDraw(GameTime gameTime)
     {
     }
 
-    public void AlwaysDraw(GameTime gameTime)
+    public override void AlwaysDraw(GameTime gameTime)
     {
         // TODO: draw game scene (refer to PlayPlayMini documentation for more info)
     }
