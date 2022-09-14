@@ -4,7 +4,8 @@ using Microsoft.Xna.Framework;
 
 namespace MyNamespace.GameStates;
 
-public class Startup: IGameState
+// sealed classes execute faster than non-sealed, so always seal your game states!
+public sealed class Startup: GameState
 {
     private GraphicsManager Graphics { get; }
     private GameStateManager GSM { get; }
@@ -15,11 +16,10 @@ public class Startup: IGameState
         GSM = gsm;
     }
     
-    public void ActiveInput(GameTime gameTime)
-    {
-    }
+    // note: you do NOT need to call the `base.` for lifecycle methods. so save some CPU cycles,
+    // and don't call them :P
 
-    public void ActiveUpdate(GameTime gameTime)
+    public override void ActiveUpdate(GameTime gameTime)
     {
         if (Graphics.FullyLoaded)
         {
@@ -28,15 +28,7 @@ public class Startup: IGameState
         }
     }
 
-    public void AlwaysUpdate(GameTime gameTime)
-    {
-    }
-
-    public void ActiveDraw(GameTime gameTime)
-    {
-    }
-
-    public void AlwaysDraw(GameTime gameTime)
+    public override void AlwaysDraw(GameTime gameTime)
     {
         // TODO: draw loading screen
     }
