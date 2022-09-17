@@ -6,7 +6,7 @@ using System;
 using System.IO;
 
 var appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-var appDataGameDirectory = $"{appData}/MyNamespace";
+var appDataGameDirectory = $"{appData}{Path.DirectorySeparatorChar}MyNamespace";
 
 Directory.CreateDirectory(appDataGameDirectory);
 
@@ -38,11 +38,10 @@ gsmBuilder
     
     // TODO: any additional service registration (refer to PlayPlayMini documentation for more info)
     .AddServices(s => {
-        var logPath = $"{appDataGameDirectory}/Log.log";
+        var logPath = $"{appDataGameDirectory}{Path.DirectorySeparatorChar}Log.log";
 
         s.RegisterSerilog(logPath);
     })
 ;
 
 gsmBuilder.Run();
-

@@ -6,7 +6,7 @@ using MyNamespace.GameStates;
 // TODO: any pre-req setup, ex:
 /*
  * var appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
- * var appDataGameDirectory = @$"{appData}/MyNamespace";
+ * var appDataGameDirectory = @$"{appData}{Path.DirectorySeparatorChar}MyNamespace";
  * 
  * Directory.CreateDirectory(appDataGameDirectory);
  */
@@ -44,4 +44,3 @@ gsmBuilder
 ;
 
 gsmBuilder.Run();
-
