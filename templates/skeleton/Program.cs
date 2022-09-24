@@ -37,7 +37,7 @@ gsmBuilder
         
     })
     
-    // TODO: any additional service registration (refer to PlayPlayMini documentation for more info)
+    // TODO: any additional service registration (refer to PlayPlayMini and/or Autofac documentation for more info)
     .AddServices(s => {
         
     })
