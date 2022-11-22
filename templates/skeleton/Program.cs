@@ -16,27 +16,20 @@ var gsmBuilder = new GameStateManagerBuilder();
 gsmBuilder
     .SetWindowSize(1920 / 4, 1080 / 4, 2)
     .SetInitialGameState<Startup>()
-    
+
     // TODO: set a better window title
     .SetWindowTitle("MyNamespace")
-    
+
     // TODO: add any resources needed (refer to PlayPlayMini documentation for more info)
-    .AddFonts(new FontMeta[] {
-        
+    .AddAssets(new IAsset[]
+    {
+        // new FontMeta(...)
+        // new PictureMeta(...)
+        // new SpriteSheetMeta(...)
+        // new SongMeta(...)
+        // new SoundEffectMeta(...)
     })
-    .AddPictures(new PictureMeta[] {
-        
-    })
-    .AddSpriteSheets(new SpriteSheetMeta[] {
-        
-    })
-    .AddSongs(new SongMeta[] {
-        
-    })
-    .AddSoundEffects(new SoundEffectMeta[] {
-        
-    })
-    
+
     // TODO: any additional service registration (refer to PlayPlayMini and/or Autofac documentation for more info)
     .AddServices(s => {
         
