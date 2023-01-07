@@ -21,6 +21,7 @@
         <RepositoryUrl>https://github.com/BenMakesGames/PlayPlayMiniTemplates</RepositoryUrl>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
