@@ -7,7 +7,7 @@
         <Title>PlayPlayMini Templates</Title>
         <Authors>Ben Hendel-Doying</Authors>
         <Description>Templates for creating games with the PlayPlayMini framework.</Description>
-        <PackageTags>dotnet-new;templates</PackageTags>
+        <PackageTags>dotnet-new;templates;playplaymini;monogame</PackageTags>
 
         <TargetFramework>net7.0</TargetFramework>
 
