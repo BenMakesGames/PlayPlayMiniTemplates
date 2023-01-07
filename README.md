@@ -1,3 +1,5 @@
+[![Buy Me a Coffee at ko-fi.com](https://raw.githubusercontent.com/BenMakesGames/AssetsForNuGet/main/buymeacoffee.png)](https://ko-fi.com/A0A12KQ16)
+
 # PlayPlayMini Templates
 
 This is a collection of templates for [PlayPlayMini](https://github.com/BenMakesGames/PlayPlayMini).

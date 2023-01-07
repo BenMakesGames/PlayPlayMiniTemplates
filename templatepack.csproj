@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageType>Template</PackageType>
-        <PackageVersion>1.4.1</PackageVersion>
+        <PackageVersion>1.4.2</PackageVersion>
         <PackageId>BenMakesGames.PlayPlayMini.Templates</PackageId>
         <Title>PlayPlayMini Templates</Title>
         <Authors>Ben Hendel-Doying</Authors>
@@ -30,6 +30,10 @@
 
     <ItemGroup>
         <None Include="LICENSE.md">
+            <Pack>True</Pack>
+            <PackagePath />
+        </None>
+        <None Include="README.md">
             <Pack>True</Pack>
             <PackagePath />
         </None>
