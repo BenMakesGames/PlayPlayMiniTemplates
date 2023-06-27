@@ -13,7 +13,7 @@ The available templates are:
    
 ## Install Instructions
 
-`dotnet new --install BenMakesGames.PlayPlayMini.Templates`
+`dotnet new install BenMakesGames.PlayPlayMini.Templates`
 
 ## Usage Instructions
 

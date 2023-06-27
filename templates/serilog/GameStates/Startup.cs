@@ -9,13 +9,17 @@ public sealed class Startup: GameState
 {
     private GraphicsManager Graphics { get; }
     private GameStateManager GSM { get; }
+    private MouseManager Mouse { get; }
 
-    public Startup(GraphicsManager graphics, GameStateManager gsm)
+    public Startup(GraphicsManager graphics, GameStateManager gsm, MouseManager mouse)
     {
         Graphics = graphics;
         GSM = gsm;
+        Mouse = mouse;
+
+        Mouse.UseCustomCursor("Cursor", (3, 1));
     }
-    
+
     // note: you do NOT need to call the `base.` for lifecycle methods. so save some CPU cycles,
     // and don't call them :P
 
@@ -31,5 +35,10 @@ public sealed class Startup: GameState
     public override void AlwaysDraw(GameTime gameTime)
     {
         // TODO: draw loading screen
+    }
+
+    public override void ActiveDraw(GameTime gameTime)
+    {
+        Mouse.ActiveDraw(gameTime);
     }
 }
