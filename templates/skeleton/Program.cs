@@ -16,6 +16,7 @@ var gsmBuilder = new GameStateManagerBuilder();
 gsmBuilder
     .SetWindowSize(1920 / 4, 1080 / 4, 2)
     .SetInitialGameState<Startup>()
+    .SetLostFocusGameState<LostFocus>()
 
     // TODO: set a better window title
     .SetWindowTitle("MyNamespace")

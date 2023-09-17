@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 
 namespace MyNamespace.GameStates;
 
-// sealed classes execute faster than non-sealed, so always seal your game states!
+// inheriting game states is a path that leads to madness, so always seal your game states!
 public sealed class Startup: GameState
 {
     private GraphicsManager Graphics { get; }
