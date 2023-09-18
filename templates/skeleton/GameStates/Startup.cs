@@ -23,7 +23,7 @@ public sealed class Startup: GameState
     // note: you do NOT need to call the `base.` for lifecycle methods. so save some CPU cycles,
     // and don't call them :P
 
-    public override void ActiveUpdate(GameTime gameTime)
+    public override void Update(GameTime gameTime)
     {
         if (Graphics.FullyLoaded)
         {
@@ -32,13 +32,12 @@ public sealed class Startup: GameState
         }
     }
 
-    public override void AlwaysDraw(GameTime gameTime)
+    public override void Draw(GameTime gameTime)
     {
         // TODO: draw loading screen
-    }
 
-    public override void ActiveDraw(GameTime gameTime)
-    {
-        Mouse.ActiveDraw(gameTime);
+        // only draw the mouse once
+        if(GSM.CurrentState == this)
+            Mouse.ActiveDraw(gameTime);
     }
 }

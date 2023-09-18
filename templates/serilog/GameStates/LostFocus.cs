@@ -25,23 +25,22 @@ public sealed class LostFocus: GameState
         PreviousState = config.PreviousState;
     }
 
-    public override void ActiveInput(GameTime gameTime)
+    public override void Input(GameTime gameTime)
     {
         if(Mouse.LeftClicked)
             GSM.ChangeState(PreviousState);
     }
 
-    public override void ActiveDraw(GameTime gameTime)
-    {
-        Mouse.ActiveDraw(gameTime);
-    }
-
-    public override void AlwaysDraw(GameTime gameTime)
+    public override void Draw(GameTime gameTime)
     {
         PreviousState.AlwaysDraw(gameTime);
 
-        Graphics.Clear(Color.DarkSlateGray);
+        Graphics.DrawFilledRectangle(Graphics.Width / 2 - 80, Graphics.Height / 2 - 14, 160, 28, Color.Black);
 
         Graphics.DrawText("Font", Graphics.Width / 2 - 70, Graphics.Height / 2 - 4, "Paused! Click to resume.", Color.White);
+
+        // only draw the mouse cursor once
+        if(GSM.CurrentState == this)
+            Mouse.ActiveDraw(gameTime);
     }
 }

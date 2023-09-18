@@ -22,39 +22,32 @@ public sealed class Playing: GameState
     // note: you do NOT need to call the `base.` for lifecycle methods. so save some CPU cycles,
     // and don't call them :P
 
-    public override void ActiveInput(GameTime gameTime)
+    public override void Input(GameTime gameTime)
     {
         // TODO: get input from keyboard, mouse, or gamepad (refer to PlayPlayMini documentation for more info)
     }
 
-    public override void ActiveUpdate(GameTime gameTime)
+    public override void FixedUpdate(GameTime gameTime)
+    {
+        // TODO: update game objects based on user input, AI logic, etc
+        // called 60 times per second regardless of frame rate; useful for physics logic
+    }
+
+    public override void Update(GameTime gameTime)
     {
         // TODO: update game objects based on user input, AI logic, etc
     }
 
-    public override void AlwaysUpdate(GameTime gameTime)
-    {
-    }
-
-    public override void ActiveDraw(GameTime gameTime)
-    {
-        Mouse.ActiveDraw(gameTime);
-    }
-
-    public override void AlwaysDraw(GameTime gameTime)
+    public override void Draw(GameTime gameTime)
     {
         // TODO: draw game scene (refer to PlayPlayMini documentation for more info)
 
         Graphics.Clear(Color.DarkSlateGray);
 
         Graphics.DrawText("Font", Graphics.Width / 2 - 30, Graphics.Height / 2 - 4, "Oh, hi! :D", Color.White);
-    }
 
-    public override void Enter()
-    {
-    }
-
-    public override void Leave()
-    {
+        // only draw the mouse cursor once
+        if(GSM.CurrentState == this)
+            Mouse.ActiveDraw(gameTime);
     }
 }
