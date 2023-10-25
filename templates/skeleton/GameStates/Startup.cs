@@ -38,6 +38,6 @@ public sealed class Startup: GameState
 
         // only draw the mouse once
         if(GSM.CurrentState == this)
-            Mouse.ActiveDraw(gameTime);
+            Mouse.Draw(gameTime);
     }
 }

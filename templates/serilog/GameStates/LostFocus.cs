@@ -33,7 +33,7 @@ public sealed class LostFocus: GameState
 
     public override void Draw(GameTime gameTime)
     {
-        PreviousState.AlwaysDraw(gameTime);
+        PreviousState.Draw(gameTime);
 
         Graphics.DrawFilledRectangle(Graphics.Width / 2 - 80, Graphics.Height / 2 - 14, 160, 28, Color.Black);
 
@@ -41,6 +41,6 @@ public sealed class LostFocus: GameState
 
         // only draw the mouse cursor once
         if(GSM.CurrentState == this)
-            Mouse.ActiveDraw(gameTime);
+            Mouse.Draw(gameTime);
     }
 }
