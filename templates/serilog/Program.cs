@@ -35,9 +35,10 @@ gsmBuilder
 
     // TODO: any additional service registration (refer to PlayPlayMini and/or Autofac documentation for more info)
     .AddServices((s, c) => {
-        var logPath = $"{appDataGameDirectory}{Path.DirectorySeparatorChar}Log.log";
+        var loggerConfig = new LoggerConfiguration()
+            .WriteTo.File($"{appDataGameDirectory}{Path.DirectorySeparatorChar}Log.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7);
 
-        s.RegisterSerilog(logPath);
+        s.RegisterSerilog(loggerConfig);
     })
 ;
 
