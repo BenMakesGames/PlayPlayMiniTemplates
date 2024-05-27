@@ -23,7 +23,7 @@ gsmBuilder
     // TODO: add any resources needed (refer to PlayPlayMini documentation for more info)
     .AddAssets(new IAsset[]
     {
-        new FontMeta("Font", "Graphics/Font", 6, 8) { HorizontalSpacing = 1 }
+        new FontMeta("Font", "Graphics/Font", 6, 8) { VerticalSpacing = 0, HorizontalSpacing = 0 },
         new PictureMeta("Cursor", "Graphics/Cursor", true),
 
         // new FontMeta(...)
