@@ -2,11 +2,10 @@
 using BenMakesGames.PlayPlayMini.Model;
 using MyNamespace.GameStates;
 using Serilog.Extensions.Autofac.DependencyInjection;
-using System;
-using System.IO;
+using Serilog;
 
 var appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-var appDataGameDirectory = $"{appData}{Path.DirectorySeparatorChar}MyNamespace";
+var appDataGameDirectory = Path.Join(appData, "MyNamespace");
 
 Directory.CreateDirectory(appDataGameDirectory);
 
@@ -21,9 +20,8 @@ gsmBuilder
     .SetWindowTitle("MyNamespace")
 
     // TODO: add any resources needed (refer to PlayPlayMini documentation for more info)
-    .AddAssets(new IAsset[]
-    {
-        new FontMeta("Font", "Graphics/Font", 6, 8) { VerticalSpacing = 0, HorizontalSpacing = 0 },
+    .AddAssets([
+        new FontMeta("Font", "Graphics/Font", 6, 8) { VerticalSpacing = 1, HorizontalSpacing = 0 },
         new PictureMeta("Cursor", "Graphics/Cursor", true),
 
         // new FontMeta(...)
@@ -31,7 +29,7 @@ gsmBuilder
         // new SpriteSheetMeta(...)
         // new SongMeta(...)
         // new SoundEffectMeta(...)
-    })
+    ])
 
     // TODO: any additional service registration (refer to PlayPlayMini and/or Autofac documentation for more info)
     .AddServices((s, c) => {

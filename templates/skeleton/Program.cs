@@ -6,7 +6,7 @@ using MyNamespace.GameStates;
 // TODO: any pre-req setup, ex:
 /*
  * var appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
- * var appDataGameDirectory = @$"{appData}{Path.DirectorySeparatorChar}MyNamespace";
+ * var appDataGameDirectory = Path.Join(appData, "MyNamespace");
  *
  * Directory.CreateDirectory(appDataGameDirectory);
  */
@@ -22,8 +22,7 @@ gsmBuilder
     .SetWindowTitle("MyNamespace")
 
     // TODO: add any resources needed (refer to PlayPlayMini documentation for more info)
-    .AddAssets(new IAsset[]
-    {
+    .AddAssets([
         new FontMeta("Font", "Graphics/Font", 6, 8) { VerticalSpacing = 0, HorizontalSpacing = 0 },
         new PictureMeta("Cursor", "Graphics/Cursor", true),
 
@@ -32,7 +31,7 @@ gsmBuilder
         // new SpriteSheetMeta(...)
         // new SongMeta(...)
         // new SoundEffectMeta(...)
-    })
+    ])
 
     // TODO: any additional service registration (refer to PlayPlayMini and/or Autofac documentation for more info)
     .AddServices((s, c) => {
