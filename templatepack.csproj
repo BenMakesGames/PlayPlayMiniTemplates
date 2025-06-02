@@ -2,14 +2,14 @@
 
     <PropertyGroup>
         <PackageType>Template</PackageType>
-        <PackageVersion>2.4.1</PackageVersion>
+        <PackageVersion>2.5.0</PackageVersion>
         <PackageId>BenMakesGames.PlayPlayMini.Templates</PackageId>
         <Title>PlayPlayMini Templates</Title>
         <Authors>Ben Hendel-Doying</Authors>
         <Description>Templates for creating games with the PlayPlayMini framework.</Description>
         <PackageTags>dotnet-new;templates;playplaymini;monogame</PackageTags>
 
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
 
         <IncludeContentInPack>true</IncludeContentInPack>
         <IncludeBuildOutput>false</IncludeBuildOutput>

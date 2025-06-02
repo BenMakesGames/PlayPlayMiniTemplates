@@ -1,4 +1,5 @@
-﻿using BenMakesGames.PlayPlayMini;
+﻿using Autofac;
+using BenMakesGames.PlayPlayMini;
 using BenMakesGames.PlayPlayMini.Model;
 using MyNamespace.GameStates;
 using Serilog.Extensions.Autofac.DependencyInjection;
