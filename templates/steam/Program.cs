@@ -1,14 +1,14 @@
-﻿using Autofac;
-using BenMakesGames.PlayPlayMini;
+﻿using BenMakesGames.PlayPlayMini;
 using BenMakesGames.PlayPlayMini.Model;
+using MyNamespace;
 using MyNamespace.GameStates;
 using Serilog.Extensions.Autofac.DependencyInjection;
 using Serilog;
 
-var appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-var appDataGameDirectory = Path.Join(appData, "MyNamespace");
+if (!SteamHelpers.Startup())
+    return;
 
-Directory.CreateDirectory(appDataGameDirectory);
+DirectoryHelpers.EnsureDirectoryExists();
 
 var gsmBuilder = new GameStateManagerBuilder();
 
@@ -35,7 +35,7 @@ gsmBuilder
     // TODO: any additional service registration (refer to PlayPlayMini and/or Autofac documentation for more info)
     .AddServices((s, c) => {
         var loggerConfig = new LoggerConfiguration()
-            .WriteTo.File($"{appDataGameDirectory}{Path.DirectorySeparatorChar}Log.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7)
+            .WriteTo.File(Path.Join(DirectoryHelpers.LogDirectory, "Log.log"), rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7)
             ##if DEBUG
                 .WriteTo.Console()
             ##endif
@@ -46,3 +46,7 @@ gsmBuilder
 ;
 
 gsmBuilder.Run();
+
+Log.Information("Shutting down - thanks for playing! :)");
+
+SteamHelpers.Shutdown();

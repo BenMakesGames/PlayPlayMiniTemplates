@@ -10,6 +10,9 @@ The available templates are:
    * Creates a template `Startup` and `Playing` game state to help you get started.
 2. `playplaymini.serilog`
    * Based on `playplaymini.skeleton`, and adds Serilog to log exceptions, and other information.
+3. `playplaymini.steam`
+    * Based on `playplaymini.skeleton`, and adds Steamworks.NET, Serilog, and a Powershell build script.
+    * Does NOT come bundled with `steam_api64.dll` - you must download this file from Valve.
    
 ## Install Instructions
 

@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageType>Template</PackageType>
-        <PackageVersion>2.5.0</PackageVersion>
+        <PackageVersion>3.0.0</PackageVersion>
         <PackageId>BenMakesGames.PlayPlayMini.Templates</PackageId>
         <Title>PlayPlayMini Templates</Title>
         <Authors>Ben Hendel-Doying</Authors>
@@ -25,6 +25,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Include="templates\steam\DirectoryHelpers.cs" />
+        <Compile Include="templates\steam\SteamHelpers.cs" />
         <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
         <Compile Remove="**\*" />
     </ItemGroup>
