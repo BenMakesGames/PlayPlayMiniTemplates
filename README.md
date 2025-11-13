@@ -1,5 +1,3 @@
-[![Buy Me a Coffee at ko-fi.com](https://raw.githubusercontent.com/BenMakesGames/AssetsForNuGet/main/buymeacoffee.png)](https://ko-fi.com/A0A12KQ16)
-
 # PlayPlayMini Templates
 
 This is a collection of templates for [PlayPlayMini](https://github.com/BenMakesGames/PlayPlayMini).
@@ -13,7 +11,9 @@ The available templates are:
 3. `playplaymini.steam`
     * Based on `playplaymini.skeleton`, and adds Steamworks.NET, Serilog, and a Powershell build script.
     * Does NOT come bundled with `steam_api64.dll` - you must download this file from Valve.
-   
+
+> [🧚 **Hey, listen!** You can support my development of open-source software on Patreon](https://www.patreon.com/BenMakesGames)
+
 ## Install Instructions
 
 `dotnet new install BenMakesGames.PlayPlayMini.Templates`

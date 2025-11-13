@@ -2,14 +2,14 @@
 
     <PropertyGroup>
         <PackageType>Template</PackageType>
-        <PackageVersion>3.0.0</PackageVersion>
+        <PackageVersion>4.0.0</PackageVersion>
         <PackageId>BenMakesGames.PlayPlayMini.Templates</PackageId>
         <Title>PlayPlayMini Templates</Title>
         <Authors>Ben Hendel-Doying</Authors>
         <Description>Templates for creating games with the PlayPlayMini framework.</Description>
         <PackageTags>dotnet-new;templates;playplaymini;monogame</PackageTags>
 
-        <TargetFramework>net9.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
 
         <IncludeContentInPack>true</IncludeContentInPack>
         <IncludeBuildOutput>false</IncludeBuildOutput>
@@ -25,8 +25,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="templates\steam\DirectoryHelpers.cs" />
-        <Compile Include="templates\steam\SteamHelpers.cs" />
         <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
         <Compile Remove="**\*" />
     </ItemGroup>
