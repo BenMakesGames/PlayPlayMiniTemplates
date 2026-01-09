@@ -7,11 +7,11 @@ public static class DirectoryHelpers
 {
     private static readonly string AppDataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
-    ##if DEBUG
+    #-#if DEBUG
         public static readonly string MyNamespaceDirectory = $"{AppDataDirectory}{Path.DirectorySeparatorChar}MyNamespace (Debug)";
-    ##else
+    #-#else
         public static readonly string MyNamespaceDirectory = $"{AppDataDirectory}{Path.DirectorySeparatorChar}MyNamespace";
-    ##endif
+    #-#endif
 
     public static readonly string LogDirectory = $"{MyNamespaceDirectory}{Path.DirectorySeparatorChar}Logs";
     public static readonly string SaveDirectory = $"{MyNamespaceDirectory}{Path.DirectorySeparatorChar}Saves";

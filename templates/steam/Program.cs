@@ -36,9 +36,9 @@ gsmBuilder
     .AddServices((s, c) => {
         var loggerConfig = new LoggerConfiguration()
             .WriteTo.File(Path.Join(DirectoryHelpers.LogDirectory, "Log.log"), rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7)
-            ##if DEBUG
+            #-#if DEBUG
                 .WriteTo.Console()
-            ##endif
+            #-#endif
         ;
 
         s.RegisterSerilog(loggerConfig);

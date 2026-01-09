@@ -2,10 +2,11 @@
 
     <PropertyGroup>
         <PackageType>Template</PackageType>
-        <PackageVersion>4.0.0</PackageVersion>
+        <PackageVersion>4.1.0</PackageVersion>
         <PackageId>BenMakesGames.PlayPlayMini.Templates</PackageId>
         <Title>PlayPlayMini Templates</Title>
         <Authors>Ben Hendel-Doying</Authors>
+        <Copyright>2022-2026 Ben Hendel-Doying</Copyright>
         <Description>Templates for creating games with the PlayPlayMini framework.</Description>
         <PackageTags>dotnet-new;templates;playplaymini;monogame</PackageTags>
 

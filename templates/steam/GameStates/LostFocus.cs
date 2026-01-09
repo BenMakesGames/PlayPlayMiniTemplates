@@ -6,12 +6,12 @@ using Microsoft.Xna.Framework;
 namespace MyNamespace.GameStates;
 
 // inheriting game states is a path that leads to madness, so always seal your game states!
-public sealed class LostFocus: GameState
+public sealed class LostFocus: GameState<LostFocusConfig>
 {
     private GraphicsManager Graphics { get; }
     private GameStateManager GSM { get; }
     private MouseManager Mouse { get; }
-    private GameState PreviousState { get; }
+    private AbstractGameState PreviousState { get; }
 
     public LostFocus(
         GraphicsManager graphics, GameStateManager gsm, MouseManager mouse,
