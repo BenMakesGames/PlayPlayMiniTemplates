@@ -1,3 +1,5 @@
+> 🧚 **Hey, listen!** As of 2026-06-14, this project and all its code has been merged into [https://github.com/BenMakesGames/PlayPlayMini](https://github.com/BenMakesGames/PlayPlayMini). This repo will receive no further updates.
+
 # PlayPlayMini Templates
 
 This is a collection of templates for [PlayPlayMini](https://github.com/BenMakesGames/PlayPlayMini).
